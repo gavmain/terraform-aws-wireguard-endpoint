@@ -1,0 +1,16 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadRoute53SSMParam",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:DescribeParameters",
+        "ssm:GetParametersByPath",
+        "ssm:GetParameters",
+        "ssm:GetParameter"
+      ],
+      "Resource": "arn:aws:ssm:${aws_region}:${account_id}:parameter/route53/*"
+    }
+  ]
+}
