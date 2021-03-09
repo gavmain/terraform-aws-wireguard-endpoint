@@ -1,0 +1,26 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CRUDWireGuardSSMParam",
+      "Effect": "Allow",
+      "Action": [
+        "ssm:PutParameter",
+        "ssm:DeleteParameter",
+        "ssm:GetParameterHistory",
+        "ssm:AddTagsToResource",
+        "ssm:GetParametersByPath",
+        "ssm:GetParameters",
+        "ssm:GetParameter",
+        "ssm:DeleteParameters"
+      ],
+      "Resource": "arn:aws:ssm:${aws_region}:${account_id}:parameter/wireguard/*"
+    },
+    {
+      "Sid": "VisualEditor1",
+      "Effect": "Allow",
+      "Action": "ssm:DescribeParameters",
+      "Resource": "*"
+    }
+  ]
+}
